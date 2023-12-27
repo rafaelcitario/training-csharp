@@ -20,23 +20,16 @@ public class MaiorNumero : MonoBehaviour
             numb_3
         };
 
-        int acc;
-
-        for (int i = 0; i < numbs.Count; i++)
+        int acc = numbs[0];
+        numb = acc;
+        for (int j = 1; j < numbs.Count; j++)
         {
-            acc = numbs[i];
-            numb = acc;
-            for (int j = 1; j < numbs.Count; j++)
-            {
 
-                if (numbs[j] - acc > 0)
-                {
-                    numb = numbs[j];
-                }
+            if (numbs[j] - acc > 0)
+            {
+                numb = numbs[j];
             }
-            break;
         }
-#pragma warning restore CS0162 // Unreachable code detected
         Debug.Log("O Maior valor é: " + numb);
     }
 
